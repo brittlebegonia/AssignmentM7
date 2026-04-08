@@ -61,7 +61,6 @@ form.addEventListener('submit', (e) => {
 })
 
 // DELETE EMPLOYEE
-
 list.addEventListener('click', function(e) {
 
     if (e.target.classList.contains('delete')) {
