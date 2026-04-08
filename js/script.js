@@ -19,11 +19,14 @@ form.addEventListener('submit', (e) => {
     let id = document.getElementById('id').value
     let name = document.getElementById('name').value
     let ext = document.getElementById('extension').value
-    
+    let email = document.getElementById('email').value
+    let dept = document.getElementById('department').value
 
     // INSERT A NEW ROW AT THE END OF THE EMPLOYEES TABLE
+    let row = list.insertRow()
 
     // INSERT A CELL FOR EACH ITEM WITHIN THE NEW ROW
+    
 
     // APPEND THE TEXT VALUES AS TEXT NODES WITHIN THE CELLS
 
