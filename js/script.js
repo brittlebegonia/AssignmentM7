@@ -41,13 +41,8 @@ form.addEventListener('submit', (e) => {
     cell5.appendChild(document.createTextNode(dept))
 
     // CREATE THE DELETE BUTTON
-    deleteBtn.addEventListener('click', (e) => {
-        if (confirm("Are you sure you want to delete this employee?")) {
-            list.deleteRow(row.rowIndex)
-            count--
-            checkMessageDisplay()
-        }
-    })
+    
+    
     // RESET THE FORM
     form.reset()
 
