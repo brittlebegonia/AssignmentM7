@@ -49,12 +49,14 @@ form.addEventListener('submit', (e) => {
         }
     })
     // RESET THE FORM
-    
+    form.reset()
 
     // SET FOCUS BACK TO THE ID TEXT BOX
+    document.getElementById('id').focus()
 
     // INCREMENENT THE NUMBER OF EMPLOYEES IN THE TABLE
-
+    count++
+    checkMessageDisplay()
 })
 
 // DELETE EMPLOYEE
