@@ -41,7 +41,11 @@ form.addEventListener('submit', (e) => {
     cell5.appendChild(document.createTextNode(dept))
 
     // CREATE THE DELETE BUTTON
-    
+    let deleteBtn = document.createElement('button')
+    deleteBtn.textContent = 'X'
+    deleteBtn.className = 'btn btn-danger btn-sm'
+
+    cell6.appendChild(deleteBtn)
     
     // RESET THE FORM
     form.reset()
