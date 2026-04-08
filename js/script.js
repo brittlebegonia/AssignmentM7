@@ -3,6 +3,11 @@ let form = document.getElementById('addForm')
 let list = document.getElementById('employees')
 
 // SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
+let count = 0
+let empCount = document.getElementById('empCount')
+function checkMessageDisplay() {
+    empCount.textContent = count
+}
 checkMessageDisplay()
 
 // ADD EMPLOYEE
