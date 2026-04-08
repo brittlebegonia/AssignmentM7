@@ -13,8 +13,13 @@ checkMessageDisplay()
 // ADD EMPLOYEE
 form.addEventListener('submit', (e) => {
     // PREVENT FORM SUBMISSION
+    e.preventDefault()
 
     // GET THE VALUES FROM THE TEXT BOXES
+    let id = document.getElementById('id').value
+    let name = document.getElementById('name').value
+    let ext = document.getElementById('extension').value
+    
 
     // INSERT A NEW ROW AT THE END OF THE EMPLOYEES TABLE
 
