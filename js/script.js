@@ -34,6 +34,11 @@ form.addEventListener('submit', (e) => {
     let cell6 = row.insertCell()
 
     // APPEND THE TEXT VALUES AS TEXT NODES WITHIN THE CELLS
+    cell1.appendChild(document.createTextNode(id))
+    cell2.appendChild(document.createTextNode(name))
+    cell3.appendChild(document.createTextNode(ext))
+    cell4.appendChild(document.createTextNode(email))
+    cell5.appendChild(document.createTextNode(dept))
 
     // CREATE THE DELETE BUTTON
 
