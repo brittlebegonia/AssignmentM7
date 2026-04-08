@@ -63,16 +63,12 @@ form.addEventListener('submit', (e) => {
 // DELETE EMPLOYEE
 list.addEventListener('click', function(e) {
 
-    if (e.target.matches('button.delete')) {
+    if (e.target.classList.contains('delete')) {
 
         if (confirm('Are you sure you want to delete this employee?')) {
 
-            let row = e.target.closest('tr')
+            list.deleteRow(e.target.closest('tr').rowIndex)
 
-            if (row.rowIndex === 0) return
-
-            list.deleteRow(row.rowIndex)
-           
             count--
             checkMessageDisplay()
         }
