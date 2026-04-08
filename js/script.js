@@ -5,13 +5,16 @@ let list = document.getElementById('employees')
 // SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
 let count = 0
 let empCount = document.getElementById('empCount')
+
 function checkMessageDisplay() {
     empCount.textContent = count
 }
+
 checkMessageDisplay()
 
 // ADD EMPLOYEE
 form.addEventListener('submit', (e) => {
+
     // PREVENT FORM SUBMISSION
     e.preventDefault()
 
@@ -42,9 +45,8 @@ form.addEventListener('submit', (e) => {
 
     // CREATE THE DELETE BUTTON
     let deleteBtn = document.createElement('button')
+    deleteBtn.className = 'btn btn-danger btn-sm delete'
     deleteBtn.textContent = 'X'
-    deleteBtn.className = 'btn btn-danger btn-sm'
-
     cell6.appendChild(deleteBtn)
     
     // RESET THE FORM
@@ -59,3 +61,20 @@ form.addEventListener('submit', (e) => {
 })
 
 // DELETE EMPLOYEE
+list.addEventListener('click', function(e) {
+
+    if (e.target.matches('button.delete')) {
+
+        if (confirm('Are you sure you want to delete this employee?')) {
+
+            let row = e.target.closest('tr')
+
+            if (row.rowIndex === 0) return
+
+            list.deleteRow(row.rowIndex)
+           
+            count--
+            checkMessageDisplay()
+        }
+    }
+})
