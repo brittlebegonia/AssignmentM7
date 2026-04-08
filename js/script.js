@@ -26,7 +26,12 @@ form.addEventListener('submit', (e) => {
     let row = list.insertRow()
 
     // INSERT A CELL FOR EACH ITEM WITHIN THE NEW ROW
-    
+    let cell1 = row.insertCell()
+    let cell2 = row.insertCell()
+    let cell3 = row.insertCell()
+    let cell4 = row.insertCell()
+    let cell5 = row.insertCell()
+    let cell6 = row.insertCell()
 
     // APPEND THE TEXT VALUES AS TEXT NODES WITHIN THE CELLS
 
